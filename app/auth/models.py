@@ -12,8 +12,7 @@ class User(BaseModel):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String, nullable=False)
     password = db.Column(db.String, nullable=False)
-    registered_on = db.Column(db.DateTime, nullable=False)
-    blog_posts = db.relationship('BlogPost', backref='owner', lazy=True)
+    registered_on = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
 
     def __init__(self, email, password):
         """Initialize the user with the user details"""
