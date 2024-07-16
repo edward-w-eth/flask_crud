@@ -1,0 +1,25 @@
+# Python
+*.pyc
+__pycache__/
+
+# Virtual Environment
+venv/
+env/
+
+# Flask-Migrate
+/migrations/
+migration.log
+
+# IDE and Editor Files
+.vscode/
+*.code-workspace
+
+# Miscellaneous
+*.sqlite3
+*.pyc
+
+# Environment Variables
+.env
+
+# Logs
+*.log
