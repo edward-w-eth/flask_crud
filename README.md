@@ -2,6 +2,20 @@
 
 This project demonstrates a simple blog application using Flask with JWT (JSON Web Token) authentication. It allows users to register, login, create, read, update, and delete blog posts.
 
+## Design Pattern
+1. Seperation of Concerns: This project is structed to sparate different functionalities into distinct modules such as auth module and blog_post module.
+2. Blueprints: Flask Blueprints are used to modularize the application. This allows different components of the app to be developed and tested independently, promoting modularity and reusability.
+3. SQLAlchemy: This project is used a high-level ORM to interact with the PostgreSQL database.
+4. JWT Authentication: Scalable authentication for RESTful APIs.
+5. Testing: Pytest and coverage test
+
+## Trade-Offs and Additional Improvements
+ * User Roles and permissions: Implementing roles for  admin, author and reader should be implemented.
+ * Email Verification and Password Reset
+ * Pagination and Filterin
+ * Frontend Integration
+ * Continuous Integration/Continuous Development(CI/CD)
+ 
 ## Setup
 
 ### Prerequisites
