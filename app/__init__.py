@@ -35,6 +35,6 @@ def create_app(config_name="development"):
     from app.auth.route import auth_blueprint
     from app.blog_post.route import blog_blueprint
 
-    app.register_blueprint(auth_blueprint)
+    app.register_blueprint(auth_blueprint, url_prefix='/auth')
     app.register_blueprint(blog_blueprint, url_prefix='/')
     return app

@@ -53,4 +53,4 @@ def delete_post(post_id):
         return jsonify({'error': 'Unauthorized'}), 401
     
     post.delete()
-    return jsonify({'message': 'Post deleted successfully'})
+    return jsonify({'message': 'Post deleted successfully'}), 204

@@ -45,6 +45,20 @@ Replace your_secret_key, your_jwt_secret_key, and postgresql://username:password
     flask db migrate
     flask db upgrade
 
+## Running Tests
+1.  Run unit tests
+   ```bash
+   pytest
+
+2. Run coverage tests
+   ```bash
+   # Run tests with coverage
+   pytest --cov=app
+
+   # Generate a coverage report
+   coverage report -m
+   ```
+
 ## Usage
 ### Running the Application
 
@@ -61,13 +75,13 @@ The application will be available at http://localhost:5000.
     ```bash
     curl -X POST http://localhost:5000/auth/register \
      -H "Content-Type: application/json" \
-     -d '{"username": "john_doe", "password": "password123"}'
+     -d '{"email": "john_doe@example.com", "password": "password123"}'
 
  * Login User:
     ```bash
     curl -X POST http://localhost:5000/auth/login \
      -H "Content-Type: application/json" \
-     -d '{"username": "john_doe", "password": "password123"}'
+     -d '{"email": "john_doe@example.com", "password": "password123"}'
 
 ### Blog Posts
  * Create Post:
@@ -98,7 +112,4 @@ The application will be available at http://localhost:5000.
      -H "Authorization: Bearer <YOUR_JWT_TOKEN>"
 
 Replace <YOUR_JWT_TOKEN> and <post_id> with actual values obtained from the login endpoint and respective post ID.
-
-
-
 
